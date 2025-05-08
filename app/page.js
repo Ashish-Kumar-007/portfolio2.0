@@ -1,5 +1,11 @@
+"use client";
 
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export default function Home() {
+  const handleSubmit = () => {
+    toast.success("Form submitted successfully!");
+  };
   return (
     <div>
       {/* Home Section */}
@@ -107,14 +113,15 @@ export default function Home() {
             Message:
             <textarea className="w-full p-3 mt-2 border border-gray-300 rounded" />
           </label>
-          <button
-            type="submit"
+          <button onClick={handleSubmit} placeholder='Submit'
+            type="button"
             className="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-500"
-          >
-            Submit
-          </button>
+          />
         </form>
       </section>
+      <button >Submit</button>
+      <ToastContainer />
+
     </div>
   );
 }
