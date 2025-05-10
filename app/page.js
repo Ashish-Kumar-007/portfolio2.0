@@ -178,20 +178,70 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 bg-[#090a47dd] text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
-          Get in <span className="text-orange-400">Touch</span>
-        </h2>
-        <p className="text-gray-300 mb-6">
-          I'd love to hear from you! Whether it's a project, job opportunity, or
-          just a chat.
-        </p>
-        <a
-          href="mailto:ashish@email.com"
-          className="inline-block bg-gradient-to-r from-pink-500 to-orange-400 text-white px-8 py-3 rounded-full font-semibold hover:opacity-90"
-        >
-          Say Hello
-        </a>
+      <section id="contact" className="bg-[#090a47dd] text-white py-16 px-4 ">
+        <div className="max-w-6xl mx-auto flex flex-col bg-[#1920385c] md:flex-row items-center gap-10 shadow-md p-12 rounded-bl-4xl rounded-tr-4xl">
+          {/* Left Image */}
+          <div className="w-full md:w-1/2">
+            <Image
+              src="/assets/contact.png"
+              alt="Contact Illustration"
+              width={500}
+              height={500}
+              className="w-full h-auto rounded-xl"
+            />
+          </div>
+
+          {/* Right Form */}
+          <div className="w-full md:w-1/2 p-8 ">
+            <h2 className="text-3xl font-bold mb-6 text-[#fb9700]">
+              Get In Touch
+            </h2>
+            <form className="space-y-4">
+              <div>
+                <label className="block text-sm mb-1" htmlFor="name">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  className="w-full px-4 py-2 bg-[#0f172a] border border-gray-600 rounded-md focus:outline-none focus:border-[#fb9700]"
+                  placeholder="Your Name"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm mb-1" htmlFor="email">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  className="w-full px-4 py-2 bg-[#0f172a] border border-gray-600 rounded-md focus:outline-none focus:border-[#fb9700]"
+                  placeholder="you@example.com"
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm mb-1" htmlFor="message">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  rows={5}
+                  className="w-full px-4 py-2 bg-[#0f172a] border border-gray-600 rounded-md focus:outline-none focus:border-[#fb9700]"
+                  placeholder="Your message here..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="bg-[#fb9700] text-white px-6 py-2 rounded-full w-full hover:bg-orange-600 transition"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
       </section>
     </div>
   );
