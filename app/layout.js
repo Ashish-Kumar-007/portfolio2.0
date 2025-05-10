@@ -46,7 +46,7 @@ export default function Layout({ children }) {
           <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             {/* Quick Links */}
             <div className="mb-6 md:mb-0 text-center md:text-left">
-              <h4 className="font-semibold text-white mb-2">Quick Links</h4>
+              <h4 className="font-semibold text-white mb-1">Quick Links</h4>
               <ul className="flex gap-2">
                 <li>
                   <a
@@ -76,7 +76,7 @@ export default function Layout({ children }) {
             </div>
 
             {/* Social Icons */}
-            <div className="flex flex-colitems-center space-x-6 text-2xl">
+            <div className="flex flex-row items-center space-x-6 text-2xl">
               <span className="text-white font-medium text-sm">Follow Me:</span>
               <a
                 href="https://linkedin.com/in/web3-eth-ashish"
@@ -106,7 +106,7 @@ export default function Layout({ children }) {
           </div>
 
           {/* Copyright */}
-          <p className="text-sm text-center mt-6">
+          <p className="text-sm text-center mt-2">
             © {new Date().getFullYear()} Ashish Kumar Sahoo. All rights
             reserved.
           </p>
