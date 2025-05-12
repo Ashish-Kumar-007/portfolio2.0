@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="">
       {/* Hero Section */}
-      <section className="min-h-screen px-4 bg-[#08083ce1] text-white flex items-center">
+      <section className="min-h-screen px-4 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white flex items-center">
         <div className="container mx-auto flex flex-col md:flex-col justify-center items-center gap-2 px-[25px]">
           {/* Text Content */}
           <div className="flex-1">
@@ -45,7 +45,7 @@ export default function Home() {
       </section>
 
       {/* About Me Section */}
-      <section id="about" className="py-20 px-4 bg-[#070839dd]">
+      <section id="about" className="py-20 px-4 bg-[#0d1830]">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1">
             <Image
@@ -77,7 +77,7 @@ export default function Home() {
       </section>
 
       {/* Academic Qualification and Job Experience */}
-      <section className=" flex justify-center bg-[#060734dd] text-white py-16 px-6">
+      <section className=" flex justify-center bg-[#0c152a] text-white py-16 px-6">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 md:gap-48 gap-20">
           {/* Academic Qualification */}
           <div>
@@ -179,7 +179,9 @@ export default function Home() {
                   <FaBriefcase />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold">Blockchain Developer</h3>
+                  <h3 className="text-xl font-semibold">
+                    Blockchain Developer
+                  </h3>
                   <p className="text-gray-400 text-sm">
                     NFThing (May. 2022 - Nov. 2022)
                   </p>
@@ -190,101 +192,128 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="skills" className="bg-[#0f172a] text-white py-12 px-6">
-  <h2 className="text-3xl font-bold mb-10 text-center">
-    My <span className="border-b-4 border-pink-500">Skills</span>
-  </h2>
+      {/* Skills Section */}
+      <section id="skills" className="bg-[#0d172e] text-white py-12 px-6">
+        <h2 className="text-3xl font-bold mb-10 text-center">
+          My <span className="border-b-4 border-pink-500">Skills</span>
+        </h2>
 
-  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+          {/* Column 1 */}
+          <div className="space-y-6">
+            {/* Languages */}
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Languages</h3>
+              <div className="flex flex-wrap gap-3">
+                {["Solidity", "JavaScript", "TypeScript", "HTML"].map(
+                  (skill) => (
+                    <span
+                      key={skill}
+                      className="px-4 py-1 bg-pink-600/20 border border-pink-500 rounded-full"
+                    >
+                      {skill}
+                    </span>
+                  )
+                )}
+              </div>
+            </div>
 
-    {/* Column 1 */}
-    <div className="space-y-6">
+            {/* Backend */}
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Backend</h3>
+              <div className="flex flex-wrap gap-3">
+                {["Node.js", "Express", "MongoDB"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-4 py-1 bg-green-600/20 border border-green-500 rounded-full"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
 
-      {/* Languages */}
-      <div>
-        <h3 className="text-xl font-semibold mb-2">Languages</h3>
-        <div className="flex flex-wrap gap-3">
-          {['Solidity', 'JavaScript', 'TypeScript', 'HTML'].map((skill) => (
-            <span key={skill} className="px-4 py-1 bg-pink-600/20 border border-pink-500 rounded-full">
-              {skill}
-            </span>
-          ))}
+            {/* Tools */}
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Tools</h3>
+              <div className="flex flex-wrap gap-3">
+                {["VS Code", "RemixIDE", "Git", "Hardhat", "Foundry"].map(
+                  (tool) => (
+                    <span
+                      key={tool}
+                      className="px-4 py-1 bg-gray-600/20 border border-gray-400 rounded-full"
+                    >
+                      {tool}
+                    </span>
+                  )
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Column 2 */}
+          <div className="space-y-6">
+            {/* Frontend */}
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Frontend</h3>
+              <div className="flex flex-wrap gap-3">
+                {["React.js", "Next.js", "Bootstrap5", "TailwindCSS"].map(
+                  (skill) => (
+                    <span
+                      key={skill}
+                      className="px-4 py-1 bg-blue-600/20 border border-blue-400 rounded-full"
+                    >
+                      {skill}
+                    </span>
+                  )
+                )}
+              </div>
+            </div>
+
+            {/* Web3 */}
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Web3</h3>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  "Web3.js",
+                  "Ethers.js",
+                  "Wagmi",
+                  "DeFi",
+                  "ERC20",
+                  "ERC721",
+                  "ERC1155",
+                  "ERC4626",
+                ].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-4 py-1 bg-purple-600/20 border border-purple-500 rounded-full"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Blockchain */}
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Blockchain</h3>
+              <div className="flex flex-wrap gap-3">
+                {["Ethereum", "Binance", "Polygon", "Arbitrum"].map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-4 py-1 bg-yellow-600/20 border border-yellow-500 rounded-full"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* Backend */}
-      <div>
-        <h3 className="text-xl font-semibold mb-2">Backend</h3>
-        <div className="flex flex-wrap gap-3">
-          {['Node.js', 'Express', 'MongoDB'].map((skill) => (
-            <span key={skill} className="px-4 py-1 bg-green-600/20 border border-green-500 rounded-full">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* Tools */}
-      <div>
-        <h3 className="text-xl font-semibold mb-2">Tools</h3>
-        <div className="flex flex-wrap gap-3">
-          {['VS Code', 'RemixIDE', 'Git', 'Hardhat', 'Foundry'].map((tool) => (
-            <span key={tool} className="px-4 py-1 bg-gray-600/20 border border-gray-400 rounded-full">
-              {tool}
-            </span>
-          ))}
-        </div>
-      </div>
-
-    </div>
-
-    {/* Column 2 */}
-    <div className="space-y-6">
-
-      {/* Frontend */}
-      <div>
-        <h3 className="text-xl font-semibold mb-2">Frontend</h3>
-        <div className="flex flex-wrap gap-3">
-          {['React.js', 'Next.js', 'Bootstrap5', 'TailwindCSS'].map((skill) => (
-            <span key={skill} className="px-4 py-1 bg-blue-600/20 border border-blue-400 rounded-full">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* Web3 */}
-      <div>
-        <h3 className="text-xl font-semibold mb-2">Web3</h3>
-        <div className="flex flex-wrap gap-3">
-          {['Web3.js', 'Ethers.js', 'Wagmi', 'DeFi', 'ERC20', 'ERC721', 'ERC1155', 'ERC4626'].map((skill) => (
-            <span key={skill} className="px-4 py-1 bg-purple-600/20 border border-purple-500 rounded-full">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* Blockchain */}
-      <div>
-        <h3 className="text-xl font-semibold mb-2">Blockchain</h3>
-        <div className="flex flex-wrap gap-3">
-          {['Ethereum', 'Binance', 'Polygon', 'Arbitrum'].map((skill) => (
-            <span key={skill} className="px-4 py-1 bg-yellow-600/20 border border-yellow-500 rounded-full">
-              {skill}
-            </span>
-          ))}
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
+      </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4 bg-[#08093edd]">
+      <section id="projects" className="py-20 px-4 bg-[#0f172afc]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
             My <span className="text-orange-400">Projects</span>
@@ -346,7 +375,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-[#090a47dd] text-white py-16 px-4 ">
+      <section id="contact" className="bg-[#0f172a] text-white py-16 px-4 ">
         <div className="max-w-6xl mx-auto flex flex-col bg-[#1920385c] md:flex-row items-center gap-2 md:gap-10 shadow-md md:p-6 rounded-bl-4xl rounded-tr-4xl">
           {/* Left Image */}
           <div className="w-full md:w-1/2">
