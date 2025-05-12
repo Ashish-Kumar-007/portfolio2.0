@@ -2,6 +2,7 @@
 "use client";
 import Image from "next/image";
 import TextLoop from "react-text-loop";
+import { FaGraduationCap, FaBriefcase } from "react-icons/fa";
 export default function Home() {
   return (
     <div className="">
@@ -11,13 +12,13 @@ export default function Home() {
           {/* Text Content */}
           <div className="flex-1">
             <h1 className="text-4xl md:text-7xl font-bold mb-4">
-              Hi, I'm <span className="text-[#fb9700]">Ashish Kumar Sahoo</span>
+              Hi, I'm <span className="text-[#fb9700]">Ashish Kumar</span>
             </h1>
             <h2 className="text-2xl md:text-5xl font-semibold mb-6">
               <TextLoop interval={5000}>
                 <span className="text-amber-400">Full Stack Developer</span>
                 <span className="text-amber-300">Smart Contract Engineer</span>
-                <span className="text-amber-200">Blockchain Enthusiast</span>
+                <span className="text-amber-200">Blockchain Developer</span>
               </TextLoop>
             </h2>
             <a
@@ -48,11 +49,10 @@ export default function Home() {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <div className="flex-1">
             <Image
-              src="/images/profile.jpg"
+              src="/assets/working.png"
               alt="Ashish working with a laptop"
               width={400}
               height={400}
-              className="rounded-2xl shadow-lg"
             />
           </div>
           <div className="flex-1">
@@ -76,44 +76,212 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Skills & Certifications Section */}
-      <section id="skills" className="py-20 px-4 bg-[#060734dd]">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Skills & <span className="text-pink-500">Certifications</span>
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-semibold text-orange-400 mb-4">
-                Technical Skills
-              </h3>
-              <ul className="space-y-3 text-gray-300">
-                <li>Next.js, React, JavaScript</li>
-                <li>Node.js, Express</li>
-                <li>Solidity, Web3.js, Ethers.js</li>
-                <li>Tailwind CSS, HTML, CSS</li>
-                <li>MongoDB, PostgreSQL</li>
-                <li>Git, GitHub, Vercel, Hardhat</li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold text-orange-400 mb-4">
-                Certifications
-              </h3>
-              <ul className="space-y-3 text-gray-300">
-                <li>Meta Front-End Developer Professional Certificate</li>
-                <li>Ethereum and Solidity: The Complete Developer's Guide</li>
-                <li>Certified Web3 Developer – Alchemy University</li>
-                <li>Solidity Smart Contracts – MetaSchool</li>
-                <li>
-                  Build the New Internet Hackathon – WalletConnect (Winner)
-                </li>
-                <li>Road to Web3 Phase 2 Hackathon – Metaschool (Winner)</li>
-              </ul>
-            </div>
+      {/* Academic Qualification and Job Experience */}
+      <section className=" flex justify-center bg-[#060734dd] text-white py-16 px-6">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 md:gap-48 gap-20">
+          {/* Academic Qualification */}
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-6 ">
+              <span className="inline-block border-b-4 border-[#fb9700] pb-2">
+                Acad
+              </span>
+              emic <span className="text-[#fb9700]">Qualification</span>
+            </h2>
+            <ul className="space-y-6">
+              <li className="flex items-center gap-4">
+                <div className="text-[#fb9700] text-xl border p-2 rounded-full">
+                  <FaGraduationCap />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">
+                    Master In Computer Applications
+                  </h3>
+                  <p className="text-gray-400 text-sm">
+                    Institute of Management and Information Technology, Cuttack{" "}
+                    <br /> (2020 - 2022)
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-center  gap-4">
+                <div className="text-[#fb9700] text-xl border p-2 rounded-full">
+                  <FaGraduationCap />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">B.Sc. in Botany</h3>
+                  <p className="text-gray-400 text-sm">
+                    Netaji Subash Memorial City Degree College, Cuttack <br />{" "}
+                    (2017 - 2020)
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-center  gap-4">
+                <div className="text-[#fb9700] text-xl border p-2 rounded-full">
+                  <FaGraduationCap />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">Higher Secondary</h3>
+                  <p className="text-gray-400 text-sm">
+                    J.K.B.K Govt. Junior College, Cuttack <br /> (2015 - 2017)
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          {/* Job Experience */}
+          <div>
+            <h2 className="text-3xl font-bold text-white mb-6">
+              <span className="inline-block border-b-4 border-[#fb9700] pb-2">
+                Job
+              </span>{" "}
+              <span className="text-[#fb9700]">Experience</span>
+            </h2>
+            <ul className="space-y-6">
+              <li className="flex items-center  gap-4">
+                <div className="text-[#fb9700] text-xl border p-2 rounded-full">
+                  <FaBriefcase />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">
+                    Software Developer - I
+                  </h3>
+                  <p className="text-gray-400 text-sm">
+                    Aarna Protocol (Nov. 2023 - Aug. 2024)
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-center  gap-4">
+                <div className="text-[#fb9700] text-xl border p-2 rounded-full">
+                  <FaBriefcase />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">
+                    Freelance Frontend and Smart Contract Developer
+                  </h3>
+                  <p className="text-gray-400 text-sm">
+                    SubLabs (Jul. 2023 - Dec. 2023)
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-center  gap-4">
+                <div className="text-[#fb9700] text-xl border p-2 rounded-full">
+                  <FaBriefcase />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">Web3 Developer</h3>
+                  <p className="text-gray-400 text-sm">
+                    BSBSTech Pvt. Ltd. (Mar. 2023 - Jul. 2023)
+                  </p>
+                </div>
+              </li>
+              <li className="flex items-center  gap-4">
+                <div className="text-[#fb9700] text-xl border p-2 rounded-full">
+                  <FaBriefcase />
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold">Blockchain Developer</h3>
+                  <p className="text-gray-400 text-sm">
+                    NFThing (May. 2022 - Nov. 2022)
+                  </p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
+
+      <section id="skills" className="bg-[#0f172a] text-white py-12 px-6">
+  <h2 className="text-3xl font-bold mb-10 text-center">
+    My <span className="border-b-4 border-pink-500">Skills</span>
+  </h2>
+
+  <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+
+    {/* Column 1 */}
+    <div className="space-y-6">
+
+      {/* Languages */}
+      <div>
+        <h3 className="text-xl font-semibold mb-2">Languages</h3>
+        <div className="flex flex-wrap gap-3">
+          {['Solidity', 'JavaScript', 'TypeScript', 'HTML'].map((skill) => (
+            <span key={skill} className="px-4 py-1 bg-pink-600/20 border border-pink-500 rounded-full">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Backend */}
+      <div>
+        <h3 className="text-xl font-semibold mb-2">Backend</h3>
+        <div className="flex flex-wrap gap-3">
+          {['Node.js', 'Express', 'MongoDB'].map((skill) => (
+            <span key={skill} className="px-4 py-1 bg-green-600/20 border border-green-500 rounded-full">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Tools */}
+      <div>
+        <h3 className="text-xl font-semibold mb-2">Tools</h3>
+        <div className="flex flex-wrap gap-3">
+          {['VS Code', 'RemixIDE', 'Git', 'Hardhat', 'Foundry'].map((tool) => (
+            <span key={tool} className="px-4 py-1 bg-gray-600/20 border border-gray-400 rounded-full">
+              {tool}
+            </span>
+          ))}
+        </div>
+      </div>
+
+    </div>
+
+    {/* Column 2 */}
+    <div className="space-y-6">
+
+      {/* Frontend */}
+      <div>
+        <h3 className="text-xl font-semibold mb-2">Frontend</h3>
+        <div className="flex flex-wrap gap-3">
+          {['React.js', 'Next.js', 'Bootstrap5', 'TailwindCSS'].map((skill) => (
+            <span key={skill} className="px-4 py-1 bg-blue-600/20 border border-blue-400 rounded-full">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Web3 */}
+      <div>
+        <h3 className="text-xl font-semibold mb-2">Web3</h3>
+        <div className="flex flex-wrap gap-3">
+          {['Web3.js', 'Ethers.js', 'Wagmi', 'DeFi', 'ERC20', 'ERC721', 'ERC1155', 'ERC4626'].map((skill) => (
+            <span key={skill} className="px-4 py-1 bg-purple-600/20 border border-purple-500 rounded-full">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      {/* Blockchain */}
+      <div>
+        <h3 className="text-xl font-semibold mb-2">Blockchain</h3>
+        <div className="flex flex-wrap gap-3">
+          {['Ethereum', 'Binance', 'Polygon', 'Arbitrum'].map((skill) => (
+            <span key={skill} className="px-4 py-1 bg-yellow-600/20 border border-yellow-500 rounded-full">
+              {skill}
+            </span>
+          ))}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 
       {/* Projects Section */}
       <section id="projects" className="py-20 px-4 bg-[#08093edd]">
@@ -179,7 +347,7 @@ export default function Home() {
 
       {/* Contact Section */}
       <section id="contact" className="bg-[#090a47dd] text-white py-16 px-4 ">
-        <div className="max-w-6xl mx-auto flex flex-col bg-[#1920385c] md:flex-row items-center gap-10 shadow-md p-12 rounded-bl-4xl rounded-tr-4xl">
+        <div className="max-w-6xl mx-auto flex flex-col bg-[#1920385c] md:flex-row items-center gap-2 md:gap-10 shadow-md md:p-6 rounded-bl-4xl rounded-tr-4xl">
           {/* Left Image */}
           <div className="w-full md:w-1/2">
             <Image
