@@ -385,7 +385,6 @@ export default function Home() {
       <section
         id="contact"
         ref={form}
-        onSubmit={sendEmail}
         className="bg-[#0f172a] text-white py-16 px-4 "
       >
         <div className="max-w-6xl mx-auto flex flex-col bg-[#1920385c] md:flex-row items-center gap-2 md:gap-10 shadow-md md:p-6 rounded-bl-4xl rounded-tr-4xl">
@@ -406,7 +405,7 @@ export default function Home() {
               Contact <span className="text-[#fb9700]">With Me</span>
             </h2>
 
-            <form ref={form} id="contact_form" onSubmit={sendEmail} className="space-y-4">
+            <form ref={form} id="contact_form" className="space-y-4">
               <div>
                 <label className="block text-sm mb-1" htmlFor="name">
                   Name
