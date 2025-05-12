@@ -19,21 +19,21 @@ export default function Layout({ children }) {
         <title>Ashish Kumar Sahoo</title>
       </head>
       <body className="font-firacode text-slate-200">
-        <header className="fixed top-0 left-0 right-0 bg-[#08083ce1] shadow-sm text-white py-4 z-50">
+        <header className="fixed top-0 left-0 right-0 bg-[#090d19] shadow-sm text-white py-4 z-50">
           <nav className="container mx-auto flex justify-center space-x-8">
             <ul className="flex space-x-8">
               <li>
-                <a href="#about" className="hover:text-blue-300">
+                <a href="#about" className="hover:text-orange-300">
                   About Me
                 </a>
               </li>
               <li>
-                <a href="#projects" className="hover:text-blue-300">
+                <a href="#projects" className="hover:text-orange-300">
                   Projects
                 </a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-blue-300">
+                <a href="#contact" className="hover:text-orange-300">
                   Contact
                 </a>
               </li>
@@ -42,7 +42,7 @@ export default function Layout({ children }) {
         </header>
         <main className=" ">{children}</main>{" "}
         {/* Added padding-top to offset header */}
-        <footer className="bg-[#08083ce1] text-gray-400 py-8">
+        <footer className="bg-[#090d19] text-gray-400 py-4">
           <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
             {/* Quick Links */}
             <div className="mb-6 md:mb-0 text-center md:text-left">
@@ -51,7 +51,7 @@ export default function Layout({ children }) {
                 <li>
                   <a
                     href="#home"
-                    className="hover:text-blue-300 transition-colors"
+                    className="hover:text-orange-300 transition-colors"
                   >
                     Home
                   </a>
@@ -59,7 +59,7 @@ export default function Layout({ children }) {
                 <li>
                   <a
                     href="#about"
-                    className="hover:text-blue-300 transition-colors"
+                    className="hover:text-orange-300 transition-colors"
                   >
                     About Me
                   </a>
@@ -67,7 +67,7 @@ export default function Layout({ children }) {
                 <li>
                   <a
                     href="#projects"
-                    className="hover:text-blue-300 transition-colors"
+                    className="hover:text-orange-300 transition-colors"
                   >
                     Projects
                   </a>
@@ -76,9 +76,10 @@ export default function Layout({ children }) {
             </div>
 
             {/* Social Icons */}
-            <div className="flex flex-row items-center space-x-6 text-2xl">
-              <span className="text-white font-medium text-sm">Follow Me:</span>
-              <a
+            <div className="flex flex-col items-start text-xl">
+              <span className="text-white font-semibold text-sm mb-2">Follow Me:</span>
+              <div className="flex flex-row gap-6">
+               <a
                 href="https://linkedin.com/in/web3-eth-ashish"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -101,7 +102,9 @@ export default function Layout({ children }) {
                 className="hover:text-white"
               >
                 <FaGithub />
-              </a>
+              </a> 
+              </div>
+              
             </div>
           </div>
 

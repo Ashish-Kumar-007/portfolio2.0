@@ -3,11 +3,17 @@
 import Image from "next/image";
 import TextLoop from "react-text-loop";
 import { FaGraduationCap, FaBriefcase } from "react-icons/fa";
+import emailjs from "emailjs-com";
+import { useRef } from "react";
+import { toast, Flip } from "react-toastify";
+
 export default function Home() {
+  const form = useRef(null);
+
   return (
     <div className="">
       {/* Hero Section */}
-      <section className="min-h-screen px-4 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-400 text-white flex items-center">
+      <section className="min-h-screen px-4 bg-gradient-to-br from-[#0d172e] via-[#0f172a] to-[#0f172afc] text-white flex items-center">
         <div className="container mx-auto flex flex-col md:flex-col justify-center items-center gap-2 px-[25px]">
           {/* Text Content */}
           <div className="flex-1">
@@ -22,8 +28,9 @@ export default function Home() {
               </TextLoop>
             </h2>
             <a
-              href="#"
-              className="inline-block bg-amber-50 text-black px-6 py-2 rounded-full font-semibold hover:bg-amber-100"
+              href="assets/cv.pdf"
+              target="_blank"
+              className="inline-block bg-gradient-to-r from-orange-400 to-pink-500 px-6 py-3 text-white rounded-lg font-medium shadow hover:opacity-90"
             >
               Download My CV
             </a>
@@ -195,7 +202,7 @@ export default function Home() {
       {/* Skills Section */}
       <section id="skills" className="bg-[#0d172e] text-white py-12 px-6">
         <h2 className="text-3xl font-bold mb-10 text-center">
-          My <span className="border-b-4 border-pink-500">Skills</span>
+          My <span className="text-[#fb9700]">Skills</span>
         </h2>
 
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -375,7 +382,12 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="bg-[#0f172a] text-white py-16 px-4 ">
+      <section
+        id="contact"
+        ref={form}
+        onSubmit={sendEmail}
+        className="bg-[#0f172a] text-white py-16 px-4 "
+      >
         <div className="max-w-6xl mx-auto flex flex-col bg-[#1920385c] md:flex-row items-center gap-2 md:gap-10 shadow-md md:p-6 rounded-bl-4xl rounded-tr-4xl">
           {/* Left Image */}
           <div className="w-full md:w-1/2">
@@ -390,10 +402,11 @@ export default function Home() {
 
           {/* Right Form */}
           <div className="w-full md:w-1/2 p-8 ">
-            <h2 className="text-3xl font-bold mb-6 text-[#fb9700]">
-              Get In Touch
+            <h2 className="text-3xl font-bold mb-6">
+              Contact <span className="text-[#fb9700]">With Me</span>
             </h2>
-            <form className="space-y-4">
+
+            <form ref={form} id="contact_form" onSubmit={sendEmail} className="space-y-4">
               <div>
                 <label className="block text-sm mb-1" htmlFor="name">
                   Name
@@ -401,6 +414,8 @@ export default function Home() {
                 <input
                   type="text"
                   id="name"
+                  name="user_name"
+                  required
                   className="w-full px-4 py-2 bg-[#0f172a] border border-gray-600 rounded-md focus:outline-none focus:border-[#fb9700]"
                   placeholder="Your Name"
                 />
@@ -413,6 +428,8 @@ export default function Home() {
                 <input
                   type="email"
                   id="email"
+                  name="user_email"
+                  required
                   className="w-full px-4 py-2 bg-[#0f172a] border border-gray-600 rounded-md focus:outline-none focus:border-[#fb9700]"
                   placeholder="you@example.com"
                 />
@@ -424,7 +441,9 @@ export default function Home() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   rows={5}
+                  required
                   className="w-full px-4 py-2 bg-[#0f172a] border border-gray-600 rounded-md focus:outline-none focus:border-[#fb9700]"
                   placeholder="Your message here..."
                 />
