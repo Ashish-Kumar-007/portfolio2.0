@@ -1,35 +1,46 @@
 // src/components/Hero.jsx
 import React from 'react';
-import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa';
+import TextLoop from "react-text-loop";
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-r from-purple-700 to-orange-400 text-white py-20 px-6 md:px-20 flex flex-col md:flex-row items-center justify-between">
-      <div className="max-w-xl text-center md:text-left">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">Hi, I’m <span className="text-yellow-300">Eveelyn</span></h1>
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6">Web Developer & Designer</h2>
-        <p className="text-lg mb-6">I’m the Front-End Developer for #Company in Bangladesh. Visit my profile & stay connected with me.</p>
-        <a
-          href="/assets/resume.pdf"
-          download
-          className="bg-white text-purple-700 font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-yellow-300 transition"
-        >
-          Download My CV
-        </a>
-        <div className="flex space-x-4 mt-6 justify-center md:justify-start">
-          <a href="#" className="text-2xl hover:text-yellow-300"><FaLinkedin /></a>
-          <a href="#" className="text-2xl hover:text-yellow-300"><FaGithub /></a>
-          <a href="#" className="text-2xl hover:text-yellow-300"><FaEnvelope /></a>
+<section className="min-h-screen px-4 bg-gradient-to-br from-[#0d172e] via-[#0f172a] to-[#0f172afc] text-white flex items-center">
+        <div className="container mx-auto flex flex-col md:flex-col justify-center items-center gap-2 px-[25px]">
+          {/* Text Content */}
+          <div className="flex-1">
+            <h1 className="text-4xl md:text-7xl font-bold mb-4">
+              Hi, I'm <span className="text-[#fb9700]">Ashish Kumar</span>
+            </h1>
+            <h2 className="text-2xl md:text-5xl font-semibold mb-6">
+              <TextLoop interval={5000}>
+                <span className="text-amber-400">Full Stack Developer</span>
+                <span className="text-amber-300">Smart Contract Engineer</span>
+                <span className="text-amber-200">Blockchain Developer</span>
+              </TextLoop>
+            </h2>
+            <a
+              href="assets/cv.pdf"
+              target="_blank"
+              className="inline-block bg-gradient-to-r from-orange-400 to-pink-500 px-6 py-3 text-white rounded-lg font-medium shadow hover:opacity-90"
+            >
+              Download My CV
+            </a>
+          </div>
+
+          {/* Profile Image */}
+          {/* <div className="flex-1 flex justify-center">
+            <div className="w-72 h-96 ">
+              <Image
+                src="/assets/dev-profile.png"
+                alt="Profile"
+                width={250}
+                height={500}
+                className="object-cover"
+              />
+            </div>
+          </div> */}
         </div>
-      </div>
-      <div className="mt-12 md:mt-0">
-        <img
-          src="/assets/profile.png"
-          alt="Profile"
-          className="w-64 h-64 object-cover rounded-full border-8 border-white shadow-xl"
-        />
-      </div>
-    </section>
+      </section>
   );
 };
 
